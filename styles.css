@@ -1,0 +1,498 @@
+:root {
+    font-family: sans-serif;
+    font-size: calc(0.6em + 0.64vw);
+    box-sizing: border-box;
+}
+*,::before,::after {
+    box-sizing: inherit;
+}
+ul {
+    list-style: none;
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    position: relative;
+    
+}
+a {
+    text-decoration: none;
+    color: #a0a0a0;
+}
+.head {
+    display: flex;
+}
+.logo {
+    display: flex;
+    /* justify-content: center; */
+    padding-left: 7rem;
+    flex: 1 4 400px;
+    /* background-color: lemonchiffon; */
+}
+.banner {
+    position: absolute;
+    min-width: 5rem;
+    min-height: 2rem;
+    top: 0.2rem;
+    left: 40%;
+    background-color:#bb4fc1;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    color: white;
+    z-index: 8000;
+    transition: all 2s linear;
+}
+.chip-pics {
+    width: 12.5rem;
+    height: 6.125rem;
+    display: block;
+    
+}
+.nav {
+    flex: 0 0 auto;
+    padding-top: 0.63rem;
+    /* padding-right: 1.25rem; */
+}
+.nav > a {
+    padding-right: 1.25rem;
+}
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -2.5rem;
+    font-size: 0.9rem;
+    margin-right: 1.25rem;
+}
+.nav-menu > div {
+    padding-right: 3.25rem ;
+    color: tomato;
+}
+.nav-menu > div:hover {
+    cursor: pointer;
+    color: green;
+}
+.nav-menu :last-child {
+    padding-right: 0;
+}
+.domin-menu {
+    position: relative;
+}
+.construct-message {
+    position: absolute;
+    z-index: 7000;
+    min-width: 18.75rem;
+    font-size: 0.9rem;
+    color: yellowgreen;
+    margin-left: -3.125rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear,
+    visibility 0s linear 0.2s
+}
+.domin-menu:hover .construct-message {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+.construct-message p {
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+
+.wrapp-menu {
+    position: absolute;
+    z-index: 7000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear,
+    visibility 0s linear 0.2s
+}
+.domin-menu:hover .wrapp-menu {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+.sub {
+    
+    padding-left: 0;
+    margin-left: -3.125rem;
+    margin-top: 0.625rem;
+    min-width: 21.88rem;
+    
+} 
+.pasta-submenu {
+    margin-left: -14rem;
+}
+.sub > li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0.4rem 0.6rem;
+    padding-left: 0;
+    color: yellowgreen;
+}
+.sub > li + li {
+    border-top: 1px solid #999;
+}
+.sub > li > span {
+    display: block;
+}
+.name{
+    width: 10rem;
+}
+.salad-submenu {
+    min-width: 18.75rem;
+    margin-left: -5rem;
+}
+.salad-submenu .name {
+    width: 7.7rem;
+}
+.drink-submenu {
+    min-width: 15.63rem;
+    margin-left: -12rem;
+}
+.drink-submenu .name {
+    width: 5rem;
+}
+
+.content {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+.content h3 {
+    text-transform: uppercase;
+    font-style: italic;
+    color: #e14164;
+    text-align: center;
+    margin-top: 2rem;
+    opacity: 1;
+    transition: all 0.2s linear;
+}
+.construct-pizza {
+    display: flex;
+    /* justify-content: space-between; */
+}
+.construct-pizza h4 {
+    color: #9acd32;
+    text-align: center;
+    margin: 0;
+}
+.block-select {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* flex: 0 1 auto; */
+    /* background-color: yellowgreen; */
+    flex: 0 1 30%;
+}
+
+.block-select button {
+    background-color: #f66b00;
+    color: white;
+    /* font-size: 1.1rem; */
+    font-size: 0.85rem;
+    padding: 0.2em 0.4em;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.block-select button:hover {
+    background-color: #d80000;
+}
+.select-base {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-select .off {
+    /* display: block; */
+    /* margin-left: 0; */
+    margin-top: 0.7rem;
+    background-color: #3eac3e;
+    align-self: flex-start;
+}
+.screens {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1 1 55%;
+    /* background-color: aqua; */
+    
+}
+.screens p {
+    color: #9acd32;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.show-ingrid {
+    width: 18.75rem;
+    height: 9.375rem;
+    overflow: auto;
+    border: 1px solid #9acd32;
+    border-radius: 0.5rem;
+    background-color: #e4e4e4;
+    text-align: left;
+    flex: 0 5 auto;
+}
+.parag,.ingrids {
+    margin-top: 0;
+    font-style: italic;
+}
+.ingrids {
+    position: relative;
+}
+.ingrids::after {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    content: "\2716";
+    color: red;
+    cursor: pointer;
+
+}
+.show-ingrid p {
+    text-align: left;
+}
+.cost-pizza {
+    margin-left:0.625rem;
+}
+.cost-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.75rem;
+    height: 1.88rem;
+    border-radius: 0.19rem;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+}
+.grn {
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.19rem;
+    background-color: black;
+    color: white;
+    margin-top: 2.65rem;
+    margin-left: 0.188rem;
+}
+
+.order {
+    text-align: center;
+    align-self: center;
+    flex: 0 5 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: brown; */
+}
+.order button {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    padding: 0.3em 0.5em;
+    border-radius: 0.4rem;
+    background-color: #3eac3e;
+    color: white;
+    font-weight: 100;
+}
+.order button:hover {
+    cursor: pointer;
+    background-color:lightgreen;
+}
+.select-ingred {
+    position: relative;
+}
+.select-ingred::before {
+    position: absolute;
+    top:1.56rem;
+    right: 9rem;
+    
+    border: 0.8rem solid;
+    border-color: #d80000 transparent transparent transparent;
+    content: "";
+}
+.pizza-poligon {
+    display: flex;
+    /* align-items: center; */
+}
+.table-for-pizza {
+    flex: 0 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.base-pizza {
+    width: 100%;
+}
+.ingridients {
+    flex: 1 0 50%;
+    display: flex;
+    flex-direction: column;
+}
+.ingridients img:hover {
+    cursor: pointer;
+}
+.sause-pizza,.topping-pizza {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sause-pizza > h2,.topping-pizza > h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    font-style: italic;
+    color: #e14164;
+}
+.topping-pizza > h2 {
+    margin-top: 15px;
+}
+.sause > p, .topping > p {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color:red;
+}
+
+
+.pics {
+    width: 9rem;
+    height: 6rem;
+}
+.pics img {
+    width: inherit;
+    height: inherit;
+}
+
+.modal-body {
+    position: fixed;
+    z-index: 5000;
+    top: 10%;
+    bottom: 30%;
+    right: 30%;
+    left: 30%;
+    background-color: rgba(255,0,0,0.7);
+    border-radius: 0.5rem;
+}
+
+
+    .modal-body p {
+        margin-top: 0;
+        margin-bottom: 0.625rem;
+        font-size: 1.2rem;
+        color: white;
+        text-align: center;
+    }
+    .modal-body label {
+        display: block;
+        margin-bottom: 0.625rem;
+        text-align: center;
+    }
+    .modal-body input {
+        width: 12.5rem;
+        height: 1.563rem;
+        border: 2px solid;
+        border-radius: 0.313rem;
+    }
+    .modal-body input[name = submit]{
+        font-size: 1.1rem;
+        
+    }
+    .modal-body textarea {
+        overflow: auto;
+        font-size: 0.9rem;
+    }
+    .modal-close {
+        position: absolute;
+        font-size: 1.3rem;
+        top: 0;
+        right: 0.625rem;
+        cursor: pointer;
+    }
+    .footer p {
+        font-style: italic;
+        color: gray;
+    }
+
+
+
+
+@media(max-width: 992px){
+    .nav-menu  {
+        margin-top: 1rem;
+    }
+    .select-base {
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 0 1 15%;
+        margin-right: 0.5rem;
+    }
+    .select-base > button + button {
+        margin-top: 0.625rem;
+    }
+    .order button {
+        margin-bottom: 0.6rem;
+    }
+    .ingridients {
+        flex-direction: row;
+    }
+    .sause-pizza {
+        align-content: flex-start;
+    }
+    .topping-pizza {
+        justify-content: flex-end;
+    }
+    .modal-body {
+        left: 20%;
+    }
+    .banner {
+        top: 2em;
+        left: 45%;
+    }
+    
+    
+}
+
+@media(max-width: 576px){
+    .logo {
+        padding-left: 2rem;
+    }
+    .nav > a {
+        padding-right: 0.6rem;
+    }
+    .nav-menu > div {
+        padding-right: 1.25rem;
+    }
+    .content {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .select-base {
+        margin-right: 0.5rem;
+    }
+    .block-select .off {
+        margin-right: -50px;
+        
+    }
+    .block-select h4 {
+        font-size: 0.8rem;
+    }
+    .pics {
+        width: 6rem;
+        height: 3rem;
+    }
+    .pics img {
+        width: inherit;
+        height: inherit;
+    }
+    .topping-pizza {
+        justify-content: center;
+    }
+    
+    
+}
+    
+
+
+

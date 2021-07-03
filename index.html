@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Пицца Чиполлино.</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="pizza.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div class="logo">
+                <img class="chip-pics" src="Pizza_pictures/0080_t_cipollino-pizzeria-logo_6.png" alt="логотип пиццерии">
+            </div>
+            <div class="banner">
+            <span class="discont">скидка 10%</span><br><span class="push">жми сюда!</span>
+            </div>
+
+            <nav class="nav">
+                <a href="#">О нас</a>
+                <a href="#">Доставка</a>
+                <a href="#">Обратная связь</a>
+            </nav>
+        </div>
+        <nav class="nav-menu">
+            <div class="domin-menu">Конструктор пиццы
+                <div class="construct-message">
+                    <p>Для выбора размера пиццы-нажмите соответствующую кнопку.</p>
+                    <p>Перетяните мышью ингредиент на рисунок основы пиццы.</p>
+                </div>
+            </div>
+            <div class="domin-menu potato">Картофельное меню
+                <div class="wrapp-menu">
+                    <ul class="potato-submenu sub">
+                        <li><span class="name">Картофельное пюре</span><span>150гр.</span><span>75грн.</span></li>
+                        <li><span class="name">Печеный картофель</span><span>120гр.</span><span>80грн.</span></li>
+                        <li><span class="name">Картошка фри</span><span>150гр.</span><span>40грн.</span></li>
+                        <li><span class="name">Сырный соус</span><span>30гр.</span><span>10грн.</span></li>
+                        <li><span class="name">Кислосладкий соус</span><span>30гр.</span><span>10грн.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="domin-menu food">Салаты
+                <div class="wrapp-menu">
+                    <ul class="salad-submenu sub">
+                        <li><span class="name">Овощной салат</span><span>200гр.</span><span>49грн.</span></li>
+                        <li><span class="name">Салат Цезарь</span><span>150гр.</яspan><span>95грн.</span></li>
+                        <li><span class="name">Салат Греческий</span><span>200гр.</span><span>85грн.</span></li>
+                        <li><span class="name">Салат из птицы</span><span>120гр.</span><span>60грн.</span></li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="domin-menu food">Паста
+                <div class="wrapp-menu">
+                    <ul class="pasta-submenu sub">
+                        <li><span class="name">Спагетти с соусом
+                                карбонара</span><span>200гр.</span><span>87грн.</span></li>
+                        <li><span class="name">Спагетти с креветками</span><span>250гр.</span><span>140грн.</span>
+                        </li>
+                        <li><span class="name">Равиолли с рикотой</span><span>250гр.</span><span>105грн.</span></li>
+                        <li><span class="name">лазанья болоньезе</span><span>200гр.</span><span>110грн.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="domin-menu food">Напитки
+                <div class="wrapp-menu">
+                    <ul class="drink-submenu sub">
+                        <li><span class="name">Кока-кола</span><span>0.5л.</span><span>32грн.</span></li>
+                        <li><span class="name">Кока кола</span><span>1л.</span><span>40грн.</span></li>
+                        <li><span class="name">Спрайт</span><span>0.5л.</span><span>34грн</span></li>
+                        <li><span class="name">Фанта</span><span>0.5л.</span><span>36грн.</span></li>
+                        <li><span class="name">Пиво<br>светлое</span><span>0.5л.</span>46грн.</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h3>Собери пиццу на свой вкус!</h3>
+        <div class="construct-pizza">
+            <div class="block-select">
+                <h4>Выберите основу пиццы :</h4>
+                <div class="select-base">
+                    <button type="button" class="small" base="Основа малая" cost="20">малая 21см</button>
+                    <button type="button" class="standart" base="Основа стандарт" cost="27">стандарт 27см</button>
+                    <button type="button" class="big" base="Основа большая" cost="36">большая 35 см</button>
+                </div>
+
+                <button type="button" class="off">вернуться в начало</button>
+
+                <div class="error-message"></div>
+
+            </div>
+            <div class="screens">
+                <div class="screen-ingrid">
+                    <p>Состав вашей пиццы :</p>
+                    <div class="show-ingrid"></div>
+                </div>
+                <div class="cost-pizza">
+                    <p>Цена:</p>
+                    <div class="cost-screen"></div>
+                </div>
+                <div class="grn">грн.</div>
+
+            </div>
+
+            <div class="order">
+                <button type="button">заказать</button>
+                <h4 class="select-ingred">Выберите ингридиенты:</h4>
+            </div>
+        </div>
+        <div class="pizza-poligon">
+
+            <div class="table-for-pizza">
+                <div class="wrapp-pizzapics">
+                    <img class="base-pizza" src="Pizza_pictures/dought_base.png" alt="Тестовая основа пиццы." hidden>
+                </div>
+            </div>
+            <div class="ingridients">
+                <div class="sause-pizza">
+                    <h2>Соусы</h2>
+                    <div class="sause">
+                        <div class="pics" name = "соус томатный" cost = "15" draggable="true"><img class="tomato" src="Pizza_pictures/sous-tomato.png" alt="соус томатный">
+                        </div>
+                        <p>Соус Томатный</p>
+                    </div>
+
+                    <div class="sause">
+                        <div class="pics" name = "Соус песто" cost = "21" draggable="true"><img class="pesto" src="Pizza_pictures/sous-pesto.png" alt="Соус песто">
+                        </div>
+                        <p>Соус песто</p>
+                    </div>
+
+                    <div class="sause">
+                        <div class="pics" name = "соус рикотта" cost = "27" draggable="true"><img class="ricotta" src="Pizza_pictures/sous-rikotta.png" alt="Соус Рикотта">
+                        </div>
+                        <p>Соус Рикотта</p>
+                    </div>
+
+                </div>
+                <div class="topping-pizza">
+                    <h2>Топпинги</h2>
+                    <div class="topping">
+                        <div class="pics" name = "кукуруза" cost = "11" draggable="true"><img class="corn" src="Pizza_pictures/corn.png" alt="Кукуруза"></div>
+                        <p>Кукуруза</p>
+                    </div>
+                    <div class="topping">
+                        <div class="pics" name = "сыр голландский" cost = "23" draggable="true"><img class="golland-chees" src="Pizza_pictures/golland-chees.png" alt="сыр голландский">
+                        </div>
+                        <p>Сыр Голландский</p>
+                    </div>
+                    <div class="topping">
+                        <div class="pics" name = "моцарелла" cost = "27" draggable="true"><img class="mozarella" src="Pizza_pictures/mocarela.png" alt="моцарелла"></div>
+                        <p>Моцарелла</p>
+                    </div>
+                    <div class="topping">
+                        <div class="pics" name = "ветчина" cost = "32" draggable="true"><img class="ham" src="Pizza_pictures/ham.png" alt="ветчина">
+                        </div>
+                        <p>ветчина</p>
+                    </div>
+                    <div class="topping">
+                        <div class="pics" name = "салями" cost = "29" draggable="true"><img class="salyami" src="Pizza_pictures/salyami.png" alt="салями">
+                        </div>
+                        <p>салями</p>
+                    </div>
+                    <div class="topping">
+                        <div class="pics" name = "грибы" cost = "21" draggable="true"><img class="mushrooms" src="Pizza_pictures/mushrooms.png" alt="грибы"></div>
+                        <p>грибы</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-body" hidden>
+                <p>Оформление заказа</p>
+                <form action="#" method="post" name="myPizza">
+                    <label>Ваше имя: <br>
+                        <input type="text" name="name" required pattern="^[a-z A-Z а-я А-Я]{3,16}$"></label>
+
+                    <label>Номер телефона: <br>
+                        <input type="tel" name="phone" required
+                            pattern="^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$"></label>
+
+                    <label>Электронная почта: <br>
+                        <input type="email" name="email" required
+                            pattern="^[A-Z a-z 0-9._%+-]+@[A-Z a-z 0-9-]+.+.[A-Z a-z]{2,4}$"></label>
+                    <label>
+                        <textarea name="text" cols="30" rows="5"></textarea>
+                    </label>
+                    <label>
+                        <input type="reset" name="reset">
+                    </label>
+
+                    <label>
+                        <input type="submit" name="submit" value="Подтвердить заказ">
+                    </label>
+                </form>
+                <div class="modal-close">
+                    &#10006
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer content">
+        <p>2010-2020 Сеть пиццерий Чипполино.</p>
+    </footer>
+</body>
+
+</html>
